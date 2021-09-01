@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- lang= fr  selon  code de langue ISO-->
+
+<head>
+    <title>Wengo, le conseil de Professionnels en ligne par téléphone et email</title>
+
+    <meta name="description"
+        content="Des milliers de professionnels Wengo disponibles 7/7j, dans tous les domaines. Les conseillers répondent à vos questions et sont évalués par les clients.">
+    <!--selon la spécification ,le meta appartient aux élément vide, non pas besoin d'étre fermé /> car il n'a pas de contenu  -->
+    <meta name="keywords" content="">
+    <meta charset="utf8">
+
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!--selon la spécification,link appartient aux élément vide, non pas besoin d'étre fermé /> car il n'a pas de contenu  -->
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- c'est mieux de séparer le CSS du HTML pour le réutiliser ailleurs mais uniquement pour cette exercice je l'ai laissé ici. -->
+    <style>
+        body {
+            background: #ccc;
+            color: #111;
+            font-family: Arial;
+            font-size: 13px;
+        }
+
+        /* mal ecrit , fermeture */
+        .menu {
+            margin: 10px 15px;
+            text-align: right;
+        }
+
+        /* align , il n'existe pas de proprièté align tout court, il faut choisir entre align-... ou bien text-align  */
+        .menu-list li {
+            display: inline-block;
+            margin: 0;
+        }
+
+        /* c mieux de travailler avec des classes sur les liste  */
+        .menu-list a {
+            padding: 5px;
+            color: #555;
+        }
+
+        .bold {
+            font-weight: bold;
+            /* le bold appatient à l'attribut font-weigt et non pas font-width */
+        }
+
+        .table {
+            border: 0px;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .adresse {
+            float: left;
+            margin-top: 20px;
+            color: #999;
+            font-size: 9px;
+            font-style: underline;
+        }
+    </style>
+</head>
+<!-- J'ai rajouté des balises sémantiques du HTML5 pour une meilleure référencement auprès des moteurs de recherche  -->
+
+<body>
+    <header>
+        <!--la div n'est pas fermé  -->
+        <div id="logo">
+            <a href="#">
+                <img src="images/logo.jpg" alt="Wengo Logo">
+                <!--selon la spécification,img appartient aux élément vide, non pas besoin d'étre fermé /> car il n'a pas de contenu  -->
+            </a>
+        </div>
+        <div class="menu">
+            <a href="#" title="login">Login</a> | <a href="#" title="s'enregistrer" class="bold">S'enregistrer</a>
+            <!--j'ai supprimé la balise <b> car on a affécté la classe bold qui fait la meme chose que la balise b  
+        j'ai rajouté des titres aux liens pour donner le sens à ces liens -->
+            </br>
+            <!-- il faut un ul  pour mettre des li -->
+            <nav>
+                <ul class="menu-list">
+                    <li><a href="#" class="bold">Juridique</a></li>
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Informatique</a></li>
+                    <li><a href="#">Psychologie</a></li>
+                    <li><a href="#">Bien-être</a></li>
+                    <li><a href="#">Astro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <article id="page">
+            <section class="how-content">
+                <h1>Comment ça marche ?</h1>
+                <!-- j'ai séparé le contenu avec des div selon la sémantique -->
+                <div>
+                    <h2>Trouvez votre Expert</h2>
+                    <p>Tous nos voyants, psychologues, avocats et autres experts sont qualifiés et leurs profils
+                        vérifiés.
+                    </p>
+                </div>
+                <div>
+                    <h2>Demandez une consultation</h2>
+                    <p>Consultez par téléphone, chat ou e-mail - quand vous voulez, où vous voulez</p>
+                </div>
+                <br />
+                <div>
+                    <h2>Connectez-vous directement</h2>
+                    <p>En quelques minutes, l'expert sélectionné vous guidera en vous proposant les outils dont vous
+                        avez
+                        besoin
+                        pour vous aider à vous sentir mieux.</p>
+                </div>
+                <div>
+                    <h2>Vous êtes un expert ?</h2>
+                    <p>Rejoignez notre brillante équipe d'experts et offrez le meilleur des services de conseils.
+                    </p>
+                    <!-- le p nest pas fermé  -->
+
+                    <!-- ce n'est pas la peine de mettre une div  -->
+                    <a href="/expert/registration">Devenez un expert </a>
+                </div>
+                <div>
+                    <h2>Lorem ipsum dolore sit amet</h2>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque :
+                        <br />
+                    <ul>
+                        <li>Lorem</li>
+                        <li>Ipsum</li>
+                        <li>Dolore</li>
+                        <li>Sit</li>
+                        <!-- il n'a pas de sens de trouver la fermeture de par p dans une liste -->
+                    </ul>
+                    <img src="images/bugz_commentcamarche.jpg" alt="commentcamarche" />
+                </div>
+            </section>
+            <section>
+                <p class="bold">Derniers inscrits :</p>
+                <!-- j'ai enlevé la balise strong et j'ai affécté la classe bold au paragraphe car ils ont la meme fonctionnalité "mettre le texte en gras" -->
+                <table class="table">
+                    <!-- j'ai déplacé le style de la balise table dans la classe nomé table en respectant border=0 comme dans l'ancienne déclaration  -->
+                    <tr>
+                        <td>Aujourd'hui</td>
+                        <td>Hier</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Total : 20
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <adresse class="adresse">2021 - MyBestPro - 75 rue d'Amsterdam - 75008 Paris
+            <!-- j'ai déplacé le style de cette balise adresse dans la classe nomé adresse -->
+        </adresse>
+    </footer>
+</body>
+
+</html>
